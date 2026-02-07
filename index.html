@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nigga obfuscator</title>
+
+    <!-- Favicons -->
+    <link rel="icon" href="https://cdn.simpleicons.org/lua/white">
+    <link rel="apple-touch-icon" href="https://cdn.simpleicons.org/lua/black">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="shell">
+    <header class="topbar">
+        <div class="brand">nigga obfuscator</div>
+        <nav>
+            <button onclick="view('home')">Home</button>
+            <button onclick="view('tools')">Tools</button>
+            <button onclick="view('about')">About</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HOME -->
+        <section id="home" class="page active">
+            <h1>Lua Protection, No Cap</h1>
+            <p class="sub">
+    
+                Clean, fast, and lowkey cracked.
+            </p>
+        </section>
+
+        <!-- TOOLS -->
+        <section id="tools" class="page">
+            <div class="grid">
+                <div class="tool-card" onclick="view('obf')">
+                    <h3>niggaObf</h3>
+                    <p>
+                       blah blah blah.
+                        Paste, click, ship. Reverse engineers stay mad.
+                    </p>
+                </div>
+
+                <div class="tool-card disabled">
+                    <h3>Encoder</h3>
+                    <p>
+                        Extra encoders dropping soon™.
+                        Still in the lab, don’t rush it.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- OBFUSCATOR -->
+        <section id="obf" class="page">
+            <h2>niggaObf</h2>
+
+            <div class="card">
+                <label>Input Lua Code</label>
+                <textarea id="input" placeholder="Drop your Lua here... be nice to it."></textarea>
+            </div>
+
+            <div class="card row">
+                <label><input type="checkbox" id="opt-rot" checked> Byte Rotation</label>
+                <label><input type="checkbox" id="opt-xor" checked> XOR </label>
+                <label><input type="checkbox" id="opt-inv"> Inversion</label>
+            </div>
+
+            <div class="card">
+                <label>Obfuscated Output</label>
+                <textarea id="output" readonly placeholder="Protected. Seasoned. Unreadable."></textarea>
+            </div>
+
+            <div class="actions">
+                <button onclick="build()">Obfuscate</button>
+                <button onclick="copy()">Copy</button>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="page">
+            <h2>About niggaObf</h2>
+            <p>
+                Runs 100% in your browser.
+                Your code never leaves your machine — no uploads,
+                no tracking, no weird stuff. We’re not shady.
+            </p>
+            <p>
+                Built for devs who want protection without
+                selling their soul or downloading sketchy tools.
+            </p>
+        </section>
+    </main>
+</div>
+
+<script src="obfuscator.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
